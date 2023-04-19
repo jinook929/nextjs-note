@@ -1,16 +1,18 @@
 import Link from "next/link";
 import styles from "./page.module.css";
+import { getProducts } from "@/services/products";
+import { Product } from "@/services/products";
 
-const products = ["pants", "skirt", "shoes", "shirt"];
+export default async function ProductsPage() {
+  const products: Product[] = await getProducts();
 
-export default function Products() {
   return (
     <>
       <h1>Products Index</h1>
       <ul className={styles.productList}>
-        {products.map((product, index) => (
-          <li key={`${index}_${product}`}>
-            <Link href={`/products/${product}`}>{product}</Link>
+        {products.map(({ id, name }) => (
+          <li key={`${id}_${name}`}>
+            <Link href={`/products/${id}`}>{name}</Link>
           </li>
         ))}
       </ul>

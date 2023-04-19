@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Wonderful Items | All Items",
-  description: "Check our wonderful items!",
+  description: "Check all of our wonderful items!",
 };
 
 export default function ProductsLayout({
