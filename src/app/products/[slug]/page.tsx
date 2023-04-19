@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 type Props = {
@@ -6,19 +7,29 @@ type Props = {
   };
 };
 
-const Pants = ({ params }: Props) => {
+export const generateMetadata = ({ params }: Props): Metadata => {
+  const { slug } = params;
+  return {
+    title: `Wonderful Items | ${slug.toUpperCase()}`,
+    description: `Check our wonderful ${slug}!`,
+  };
+};
+
+const ProductPage = ({ params }: Props) => {
   const slug = params.slug;
   if (slug === "nothing") {
     notFound();
   }
-  return <h1>{slug} Page</h1>;
+  return <h1>{slug.toUpperCase()} Page</h1>;
 };
 
-export default Pants;
+export default ProductPage;
 
 export const generateStaticParams = () => {
-  const products = ["pants", "shoes", "shirts"];
-  return products.map((product) => ({
+  const products = ["pants", "skirt", "shirt"];
+  const params = products.map((product) => ({
     slug: product,
   }));
+
+  return params;
 };
