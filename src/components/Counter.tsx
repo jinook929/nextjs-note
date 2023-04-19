@@ -3,8 +3,8 @@
 import { useState } from "react";
 import styles from "./Counter.module.css";
 
-const Counter = () => {
-  console.log("Hello! from ### client ###");
+export default function Counter() {
+  console.log("### client: Counter component ###");
   const [count, setCount] = useState(0);
   return (
     <div>
@@ -16,6 +16,4 @@ const Counter = () => {
       </div>
     </div>
   );
-};
-
-export default Counter;
+}

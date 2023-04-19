@@ -15,15 +15,13 @@ export const generateMetadata = ({ params }: Props): Metadata => {
   };
 };
 
-const ProductPage = ({ params }: Props) => {
+export default function ProductPage({ params }: Props) {
   const slug = params.slug;
   if (slug === "nothing") {
     notFound();
   }
   return <h1>{slug.toUpperCase()} Page</h1>;
 };
-
-export default ProductPage;
 
 export const generateStaticParams = () => {
   const products = ["pants", "skirt", "shirt"];

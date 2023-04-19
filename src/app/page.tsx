@@ -8,7 +8,7 @@ import Counter from "@/components/Counter";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  console.log("Hello! from ### server ###");
+  console.log("### server: Homepage ###");
   // console.log(os.hostname());
   // notFound();
   return (
