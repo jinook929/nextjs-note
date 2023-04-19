@@ -6,7 +6,6 @@ import os from "os"; // node.js module API
 import Counter from "@/components/Counter";
 
 const inter = Inter({ subsets: ["latin"] });
-console.log("| :atom: | inter: ", inter);
 
 export default function Home() {
   console.log("### server: Homepage ###");
