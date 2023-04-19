@@ -6,6 +6,7 @@ import os from "os"; // node.js module API
 import Counter from "@/components/Counter";
 
 const inter = Inter({ subsets: ["latin"] });
+console.log("| :atom: | inter: ", inter);
 
 export default function Home() {
   console.log("### server: Homepage ###");
@@ -13,7 +14,7 @@ export default function Home() {
   // notFound();
   return (
     <main className={styles.main}>
-      <h1 className={styles.title}>Homepage!!!</h1>
+      <h1 className={styles.title}>🔥 Homepage 🔥</h1>
       <Counter />
     </main>
   );
