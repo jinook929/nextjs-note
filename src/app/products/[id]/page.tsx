@@ -1,6 +1,9 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getProductById, getProducts } from "@/services/products";
+import MeowArticle from "@/components/MeowArticle";
+
+export const revalidate = 3;
 
 type Props = {
   params: {
@@ -24,15 +27,19 @@ export const generateMetadata = async ({
   };
 };
 
-export default async function ProductPage({ params }: Props) {
-  const id = params.id;
+export default async function ProductPage({ params: { id } }: Props) {
   const product = await getProductById(id);
 
   if (!product) {
     notFound();
   }
 
-  return <h1>{product?.name.toUpperCase()} Page</h1>;
+  return (
+    <section>
+      <h1>{product.name.toUpperCase()} Page</h1>
+      <MeowArticle />
+    </section>
+  );
 }
 
 export const generateStaticParams = async () => {

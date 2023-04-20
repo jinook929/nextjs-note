@@ -6,6 +6,10 @@
     border-bottom: 1px solid #132f52;
 }
 
+.brand {
+    margin-left: 0.5rem;
+}
+
 .nav a {
     padding-inline: 8px;
 }

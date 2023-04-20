@@ -1,3 +1,5 @@
 export async function GET(request: Request) {
-  return new Response('Hello, Next.js!')
+  const res =  new Response(JSON.stringify({ greeting: "Hello, Next.js!" }));
+  
+  return res;
 }

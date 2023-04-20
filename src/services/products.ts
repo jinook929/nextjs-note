@@ -7,15 +7,21 @@ export type Product = {
   price: number;
 }
 
+function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 export const getProducts = async (): Promise<Product[]> => {
+  await sleep(1000);
+
   const filePath = path.join(process.cwd(), "data", "products.json");
   const data = await fs.readFile(filePath, "utf-8");
-
+  
   return JSON.parse(data);
 }
 
 export const getProductById = async (id: string): Promise<Product | undefined> => {
-  const product: Product | undefined = (await getProducts()).find((product) => product.id === id);
+  const product = (await getProducts()).find((product) => product.id === id);
 
   return product;
 }
