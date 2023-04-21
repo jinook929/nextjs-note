@@ -1,7 +1,10 @@
 import { Metadata } from "next";
-import { notFound } from "next/navigation";
+import Image from "next/image";
+import { notFound, redirect } from "next/navigation";
 import { getProductById, getProducts } from "@/services/products";
+import styles from "./page.module.css";
 import MeowArticle from "@/components/MeowArticle";
+import BackToAllProducts from "@/components/BackToAllProducts";
 
 export const revalidate = 3;
 
@@ -31,12 +34,21 @@ export default async function ProductPage({ params: { id } }: Props) {
   const product = await getProductById(id);
 
   if (!product) {
-    notFound();
+    redirect("/products");
+    // notFound();
   }
 
   return (
     <section>
-      <h1>{product.name.toUpperCase()} Page</h1>
+      <h1 className={styles.title}>{product.name.toUpperCase()} Page</h1>
+      <BackToAllProducts />
+      <div className={styles.imgWrapper}>
+        <Image
+          src={`/assets/images/${product.image}`}
+          alt={product.name}
+          fill
+        />
+      </div>
       <MeowArticle />
     </section>
   );

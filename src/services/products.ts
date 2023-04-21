@@ -5,6 +5,7 @@ export type Product = {
   id: string;
   name: string;
   price: number;
+  image: string;
 }
 
 function sleep(ms: number) {
@@ -12,7 +13,7 @@ function sleep(ms: number) {
 }
 
 export const getProducts = async (): Promise<Product[]> => {
-  await sleep(1000);
+  await sleep(500);
 
   const filePath = path.join(process.cwd(), "data", "products.json");
   const data = await fs.readFile(filePath, "utf-8");

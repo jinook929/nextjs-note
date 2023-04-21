@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import { getProducts } from "@/services/products";
 import Image from "next/image";
-import clothesImage from "../../../public/images/clothes.jpg";
+import clothesImage from "/public/assets/images/clothes.jpg";
 
 // export const revalidate = 10;
 

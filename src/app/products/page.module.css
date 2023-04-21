@@ -1,5 +1,7 @@
 .title {
   margin-bottom: 1rem;
+  font-family: var(--font-gothic);
+  text-align: center;
 }
 
 .image {
@@ -29,6 +31,11 @@
   border-radius: 5px;
   padding: 0.5rem;
   background-color: rgba(85, 107, 47, 0.5);
+}
+
+.productList li a {
+  font-family: var(--font-bold);
+  font-size: 2rem;
 }
 
 .article {

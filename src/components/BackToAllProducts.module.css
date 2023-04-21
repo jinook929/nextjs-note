@@ -1,0 +1,10 @@
+.backBtn {
+  width: 100%;
+  margin-block: 1rem
+}
+
+.backBtn button {
+  display: block;
+  margin-inline: auto;
+  padding: 0.5rem;
+}

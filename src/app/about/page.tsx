@@ -6,7 +6,7 @@ export default function About() {
       <h1>About Us</h1>
       <p>
         Visit{" "}
-        <Link href="http://google.com" target="_blank">
+        <Link href="/about/me/jjung">
           HERE
         </Link>
       </p>

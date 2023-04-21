@@ -2,16 +2,37 @@
   {
     "id": "1234",
     "name": "Jeans",
-    "price": 100
+    "price": 100,
+    "image": "jeans.jpg"
   },
   {
     "id": "1235",
     "name": "T Shirt",
-    "price": 100
+    "price": 100,
+    "image": "tshirt.jpg"
   },
   {
     "id": "1236",
     "name": "Boots",
-    "price": 100
+    "price": 100,
+    "image": "boots.jpg"
+  },
+  {
+    "id": "1237",
+    "name": "Shoes",
+    "price": 100,
+    "image": "shoes.jpg"
+  },
+  {
+    "id": "1238",
+    "name": "Jacket",
+    "price": 100,
+    "image": "jacket.jpg"
+  },
+  {
+    "id": "1239",
+    "name": "Accessories",
+    "price": 100,
+    "image": "accessories.jpg"
   }
 ]

@@ -1,7 +1,30 @@
 import Link from "next/link";
 import "./globals.css";
+import { Inter, Roboto } from "next/font/google";
+import localFont from 'next/font/local';
 import styles from "./layout.module.css";
 import { Metadata } from "next";
+
+const sans = Inter({ 
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+const gothic = Roboto({
+  weight: '700', 
+  subsets: ["latin"], 
+  variable: "--font-gothic",
+});
+
+const bold = localFont({
+  src: "../../public/assets/fonts/HussarBoldWeb-bf92.woff",
+  variable: "--font-bold",
+});
+
+const brand = localFont({
+  src: "../../public/assets/fonts/BigParty4Blue-0f5b.woff2",
+  variable: "--font-brand",
+});
 
 export const metadata: Metadata = {
   title: "Wonderful Items",
@@ -17,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${sans.variable} ${gothic.variable}  ${bold.variable}  ${brand.variable}`}>
       <body>
         <header className={styles.header}>
           <h1 className={styles.brand}><Link href="/">Demo Note</Link></h1>

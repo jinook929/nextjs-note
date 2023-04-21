@@ -1,8 +1,9 @@
 import { getProducts } from "@/services/products";
+import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
   const products = await getProducts();
-  const res =  new Response(JSON.stringify(products));
+  const res =  NextResponse.json(products);
   
   return res;
 }
