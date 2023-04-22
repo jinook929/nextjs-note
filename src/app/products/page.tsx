@@ -19,7 +19,7 @@ export default async function ProductsPage() {
   const catFact = catData.data[0];
 
   return (
-    <>
+    <div>
       <h1 className={styles.title}>All Products Index</h1>
       <Image className={styles.image} src={clothesImage} alt="clothes" />
       <ul className={styles.productList}>
@@ -30,6 +30,6 @@ export default async function ProductsPage() {
         ))}
       </ul>
       <article className={styles.article}>{catFact}</article>
-    </>
+    </div>
   );
 }
