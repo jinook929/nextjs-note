@@ -45,6 +45,7 @@ export default function RootLayout({
         <header className={styles.header}>
           <h1 className={styles.brand}><Link href="/">Demo Note</Link></h1>
           <nav className={styles.nav}>
+            <Link href="/animations">Animations</Link>
             <Link href="/products">Products</Link>
             <Link href="/contact">Contact</Link>
             <Link href="/about">About</Link>

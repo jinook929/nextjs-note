@@ -70,7 +70,6 @@ const icons = [
 ];
 
 export default function AnimationPage() {
-  console.log(faApple.iconName)
   return (
     <section className={styles.section}>
       {icons.map((icon, index) => (
