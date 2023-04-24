@@ -47,6 +47,8 @@ export default async function ProductPage({ params: { id } }: Props) {
           src={`/assets/images/${product.image}`}
           alt={product.name}
           fill
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj6Djw/z8AB2IDRxGaHL0AAAAASUVORK5CYII="
+          placeholder="blur"
         />
       </div>
       <MeowArticle />
