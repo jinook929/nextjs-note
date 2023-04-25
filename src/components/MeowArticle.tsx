@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import styles from "./MeowArticle.module.css";
+import styles from "./MeowArticle.module.scss";
 
 export default function MeowArticle() {
   const [catText, setCatText] = useState("Loading...");

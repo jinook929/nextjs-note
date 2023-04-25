@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import styles from "./BackToAllProducts.module.css";
+import styles from "./BackToAllProducts.module.scss";
 
 export default function BackToAllProducts() {
   const router = useRouter();

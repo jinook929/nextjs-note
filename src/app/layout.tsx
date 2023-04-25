@@ -1,8 +1,8 @@
 import Link from "next/link";
-import "./globals.css";
+import "./globals.scss";
 import { Inter, Roboto } from "next/font/google";
 import localFont from 'next/font/local';
-import styles from "./layout.module.css";
+import styles from "./layout.module.scss";
 import { Metadata } from "next";
 
 const sans = Inter({ 
