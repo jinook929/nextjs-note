@@ -22,7 +22,7 @@ const bold = localFont({
 });
 
 const brand = localFont({
-  src: "../../public/assets/fonts/BigParty4Blue-0f5b.woff2",
+  src: "../../public/assets/fonts/Adine Kirnberg.ttf",
   variable: "--font-brand",
 });
 
