@@ -43,7 +43,7 @@ export default function RootLayout({
     <html lang="en" className={`${sans.variable} ${gothic.variable}  ${bold.variable}  ${brand.variable}`}>
       <body>
         <header className={styles.header}>
-          <h1 className={styles.brand}><Link href="/">Demo Note</Link></h1>
+          <h1 className={styles.brand}><Link href="/">Test Demos</Link></h1>
           <nav className={styles.nav}>
             <Link href="/animations">Animations</Link>
             <Link href="/products">Products</Link>
