@@ -27,7 +27,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const numOfLines = [...Array(20)];
-
 const numOfIconSets = [...Array(5)]
 
 export default function AnimationPage() {
@@ -36,7 +35,7 @@ export default function AnimationPage() {
       {numOfLines.map((lineNum, index) => (
         <div key={`${index}_${lineNum}`} className={`${styles.row} ${index % 2 === 0 ? styles.even : styles.odd}`}>
           {numOfIconSets.map((setNum) => (
-            <div key={setNum}>
+            <div key={`${index}_${setNum}`}>
               <FontAwesomeIcon icon={faYoutube} aria-hidden="true" />
               <FontAwesomeIcon icon={faFacebook} aria-hidden="true" />
               <FontAwesomeIcon icon={faTwitter} aria-hidden="true" />
