@@ -8,7 +8,7 @@ export default function JjungPage() {
         alignItems: "center",
       }}
     >
-      J. Jung&apos;s Page
+      💻 J. Jung&apos;s Page 💻
     </h1>
   );
 }

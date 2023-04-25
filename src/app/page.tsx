@@ -10,7 +10,7 @@ export default function Home() {
   // notFound();
   return (
     <main className={styles.main}>
-      <h1 className={styles.title}>🔥 Homepage 🔥</h1>
+      <h1 className={styles.title}>👚 Landing Page 🥼</h1>
       <Counter />
       <div className={styles.imgs}>
         <div className={styles.imgWrapper}>
