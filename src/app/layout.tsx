@@ -38,7 +38,7 @@ export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-}) {
+}) {  
   return (
     <html lang="en" className={`${sans.variable} ${gothic.variable}  ${bold.variable}  ${brand.variable}`}>
       <body>

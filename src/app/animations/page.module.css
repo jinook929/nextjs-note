@@ -41,8 +41,8 @@
 }
 
 .section .row.odd div {
-  animation: moveRight 30s linear infinite;
-  animation-delay: -30s;
+  animation: moveRight 60s linear infinite;
+  animation-delay: -60s;
 }
 
 @keyframes moveLeft {
