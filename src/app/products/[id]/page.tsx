@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { notFound, redirect } from "next/navigation";
 import { getProductById, getProducts } from "@/services/products";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 import MeowArticle from "@/components/MeowArticle";
 import BackToAllProducts from "@/components/BackToAllProducts";
 

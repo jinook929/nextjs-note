@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import styles from "./Counter.module.css";
+import styles from "./Counter.module.scss";
 
 export default function Counter() {
   console.log("### client: Counter component ###");

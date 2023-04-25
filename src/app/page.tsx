@@ -1,7 +1,7 @@
 import Image from "next/image";
 // import { notFound } from "next/navigation";
 // import os from "os"; // node.js module API
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 import Counter from "@/components/Counter";
 
 export default function Home() {
