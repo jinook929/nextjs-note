@@ -1,0 +1,121 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-gothic);
+  margin: 0;
+  padding: 0;
+  height: calc(100% - 78px);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000;
+
+  .box {
+    width: 2rem;
+    height: 2rem;
+    overflow: hidden;
+    border: 1px solid rgba(100, 100, 100, 0.01);
+    transition: 3s ease-in-out;
+    position: relative;
+
+    &:hover {
+      border-color: rgba(100, 100, 100, 0.2);
+      transition: 75ms ease-in-out;
+    }
+
+    // animation: blink 1s ease-in infinite;
+    @keyframes blink {
+      0% {
+        border-color: rgba(100, 100, 100, 0);
+      }
+      50% {
+        border-color: rgba(100, 100, 100, 0.1);
+      }
+      100% {
+        border-color: rgba(100, 100, 100, 0);
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0.5rem;
+      bottom: 0.5rem;
+      left: 0.5rem;
+      right: 0.5rem;
+      background-color: rgba(10, 10, 10, 0.1);
+      box-shadow: 0 1px 4px #000;
+      transition: 3s ease-in-out;
+    }
+
+    &.dune:hover::after {
+      background-color: var(--madwell-dune);
+      box-shadow: 0 0 3px var(--madwell-dune), 0 0 10px var(--madwell-dune);
+      transition: 0s ease-in-out;
+    }
+    &.blush:hover::after {
+      background-color: var(--madwell-blush);
+      box-shadow: 0 0 3px var(--madwell-blush), 0 0 10px var(--madwell-blush);
+      transition: 0s ease-in-out;
+    }
+    &.jade:hover::after {
+      background-color: var(--madwell-jade);
+      box-shadow: 0 0 3px var(--madwell-jade), 0 0 10px var(--madwell-jade);
+      transition: 0s ease-in-out;
+    }
+    &.glacier:hover::after {
+      background-color: var(--madwell-glacier);
+      box-shadow: 0 0 3px var(--madwell-glacier),
+        0 0 10px var(--madwell-glacier);
+      transition: 0s ease-in-out;
+    }
+    &.dawn:hover::after {
+      background-color: var(--madwell-dawn);
+      box-shadow: 0 0 3px var(--madwell-dawn), 0 0 10px var(--madwell-dawn);
+      transition: 0s ease-in-out;
+    }
+    &.magma:hover::after {
+      background-color: var(--madwell-magma);
+      box-shadow: 0 0 3px var(--madwell-magma), 0 0 10px var(--madwell-magma);
+      transition: 0s ease-in-out;
+    }
+    &.grove:hover::after {
+      background-color: var(--madwell-grove);
+      box-shadow: 0 0 3px var(--madwell-grove), 0 0 10px var(--madwell-grove);
+      transition: 0s ease-in-out;
+    }
+    &.monsoon:hover::after {
+      background-color: var(--madwell-monsoon);
+      box-shadow: 0 0 3px var(--madwell-monsoon),
+        0 0 10px var(--madwell-monsoon);
+      transition: 0s ease-in-out;
+    }
+    &.ochre:hover::after {
+      background-color: var(--madwell-ochre);
+      box-shadow: 0 0 3px var(--madwell-ochre), 0 0 10px var(--madwell-ochre);
+      transition: 0s ease-in-out;
+    }
+    &.wine:hover::after {
+      background-color: var(--madwell-wine);
+      box-shadow: 0 0 3px var(--madwell-wine), 0 0 10px var(--madwell-wine);
+      transition: 0s ease-in-out;
+    }
+    &.forest:hover::after {
+      background-color: var(--madwell-forest);
+      box-shadow: 0 0 3px var(--madwell-forest), 0 0 10px var(--madwell-forest);
+      transition: 0s ease-in-out;
+    }
+    &.navy:hover::after {
+      background-color: var(--madwell-navy);
+      box-shadow: 0 0 3px var(--madwell-navy), 0 0 10px var(--madwell-navy);
+      transition: 0s ease-in-out;
+    }
+  }
+}
