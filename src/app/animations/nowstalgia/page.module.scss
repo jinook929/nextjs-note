@@ -1,0 +1,322 @@
+.main {
+  .nowstalgiaHero {
+    position: relative;
+    height: calc(100vh - 78px);
+
+    .heroBackground {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+/* .nowstalgiaHero */
+.nowstalgiaHero {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #000;
+  position: relative;
+  text-align: center;
+  padding: 28px;
+  overflow: hidden;
+  cursor: default;
+}
+
+.nowstalgiaHero h1 {
+  font-weight: 400;
+  text-transform: none;
+  font-family: sans-serif;
+  font-size: 190px;
+  line-height: 194px;
+  margin: 0;
+  letter-spacing: -0.05em;
+  overflow: hidden;
+  color: white;
+  background-color: transparent;
+  pointer-events: none;
+}
+@media (max-width: 1200px) {
+  .nowstalgiaHero h1 {
+    font-size: 72px;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+  }
+}
+@media (max-width: 900px) {
+  .nowstalgiaHero h1 {
+    font-size: 64px;
+  }
+}
+@media (max-width: 600px) {
+  .nowstalgiaHero h1 {
+    font-size: 48px;
+  }
+}
+@media (max-width: 360px) {
+  .nowstalgiaHero h1 {
+    font-size: 40px;
+  }
+}
+
+.nowstalgiaHero h1 span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.5s, color 0.5s;
+}
+
+.nowstalgiaHero h1 span.default {
+  color: #fff;
+  font-family: Helvetica, "Arial", sans-serif;
+}
+
+.nowstalgiaHero h1 span.purple {
+  color: #9b59b6;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.nowstalgiaHero h1 span.blue {
+  color: #3498db;
+  font-family: Courier, monospace;
+}
+
+.nowstalgiaHero h1 span.red {
+  color: #e74c3c;
+  font-family: Georgia, serif;
+}
+
+.nowstalgiaHero h1 span.gold {
+  color: #ffbf0f;
+  font-family: "Apple Chancery", cursive;
+}
+
+.nowstalgiaHero h1 span.animate {
+  opacity: 1;
+}
+
+/* .nowstalgiaContent */
+.nowstalgiaContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nowstalgiaContent .title {
+  background-color: #ebe7e2;
+  padding-block: 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 2rem;
+}
+@media (max-width: 900px) {
+  .nowstalgiaContent .title {
+    padding-block: 56px;
+  }
+}
+@media (max-width: 600px) {
+  .nowstalgiaContent .title {
+    padding-block: 32px;
+  }
+}
+
+.nowstalgiaContent .title h2 {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 54px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  text-transform: none;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1440px;
+  padding-inline: 88px;
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .nowstalgiaContent .title h2 {
+    font-size: 48px;
+    padding-inline: 56px;
+  }
+}
+@media (max-width: 600px) {
+  .nowstalgiaContent .title h2 {
+    font-size: 32px;
+    padding-inline: 32px;
+  }
+}
+
+.nowstalgiaContent .title .word .pronunciation {
+  cursor: pointer;
+}
+@media (max-width: 360px) {
+  .nowstalgiaContent .title .word .pronunciation {
+    display: block;
+  }
+}
+
+.nowstalgiaContent .title .definition {
+  font-weight: 200;
+}
+
+.nowstalgiaContent .title .definition .highlight {
+  display: inline-table;
+  position: relative;
+  overflow: hidden;
+}
+
+.nowstalgiaContent .title .definition .highlight span {
+  position: relative;
+  z-index: 2;
+}
+
+.nowstalgiaContent .title .definition .highlight::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: calc(100% - 2px);
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: left 0.5s;
+  background: rgba(255, 200, 0, 0.75);
+  z-index: 1;
+}
+
+.nowstalgiaContent .title .word .pronunciation:hover {
+  text-decoration: underline;
+}
+
+.nowstalgiaContent
+  .title
+  .word:has(.pronunciation:hover)
+  + .definition
+  .highlight::before {
+  left: 0;
+  animation: colorCycle 10s linear infinite;
+}
+
+.nowstalgiaContent .content {
+  padding: 88px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+@media (max-width: 900px) {
+  .nowstalgiaContent .content {
+    padding: 56px;
+  }
+}
+@media (max-width: 600px) {
+  .nowstalgiaContent .content {
+    padding: 32px;
+  }
+}
+
+.nowstalgiaContent .content p {
+  margin: 0 0 0.75rem;
+  max-width: 580px;
+  font-family: "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-transform: none;
+}
+@media (max-width: 900px) {
+  .nowstalgiaContent .content p {
+    font-size: 16px;
+  }
+}
+
+.nowstalgiaContent .content p:last-of-type {
+  margin-bottom: 0;
+}
+
+.nowstalgiaContent .btn {
+  display: inline-block;
+  margin-top: 2.25rem;
+}
+@media (max-width: 600px) {
+  .nowstalgiaContent .btn {
+    width: 100%;
+  }
+}
+
+.nowstalgiaContent .btn .button {
+  display: block;
+  padding: 15px 30px;
+  color: #fff;
+  background-color: black;
+  font-family: "Calibre", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.5s ease;
+}
+@media (max-width: 900px) {
+  .nowstalgiaContent .btn .button {
+    font-size: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .nowstalgiaContent .btn .button {
+    text-align: center;
+  }
+}
+@media (max-width: 360px) {
+  .nowstalgiaContent .btn .button {
+    font-size: 14px;
+  }
+}
+
+.nowstalgiaContent .btn .button:hover {
+  animation: colorCycle 10s linear infinite;
+}
+
+@keyframes colorCycle {
+  0% {
+    background-color: #f78da7;
+  }
+  10% {
+    background-color: #cf2e2e;
+  }
+  20% {
+    background-color: #ff6900;
+  }
+  30% {
+    background-color: #fcb900;
+  }
+  40% {
+    background-color: #7bdcb5;
+  }
+  50% {
+    background-color: #00d084;
+  }
+  60% {
+    background-color: #ff6900;
+  }
+  70% {
+    background-color: #0693e3;
+  }
+  80% {
+    background-color: #9b51e0;
+  }
+  90% {
+    background-color: #e78dfa;
+  }
+  100% {
+    background-color: #f78da7;
+  }
+}
