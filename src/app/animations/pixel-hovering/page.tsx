@@ -45,7 +45,11 @@ export default function PixelHoveringPage() {
                   ? styles.forest
                   : styles.navy
               }`}
-            ></div>
+            >
+              <span className={styles.ripple1}></span>
+              <span className={styles.ripple2}></span>
+              <span className={styles.ripple3}></span>
+            </div>
           );
         }
       }

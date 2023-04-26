@@ -14,34 +14,67 @@
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   background-color: #000;
 
   .box {
     width: 2rem;
     height: 2rem;
-    overflow: hidden;
     border: 1px solid rgba(100, 100, 100, 0.01);
+    border-radius: 50%;
     transition: 3s ease-in-out;
     position: relative;
+
+    & .ripple1, & .ripple2, & .ripple3 {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      transform: scale(0);
+      transform-origin: center;
+      transition: transform 3s ease-out, opacity 3s ease-out, z-index 3s ease-out;
+      opacity: 0;
+      z-index: -1;
+    }
 
     &:hover {
       border-color: rgba(100, 100, 100, 0.2);
       transition: 75ms ease-in-out;
+
+      & .ripple1, & .ripple2, & .ripple3 {
+        transition: transform 0ms ease-in, opacity 0ms ease-in, z-index 0ms ease-in;
+        opacity: 1;
+        z-index: 1;
+      }
+      & .ripple1 {
+        transform: scale(2);
+        transition-delay: 50ms;
+      }
+      & .ripple2 {
+        transform: scale(3);
+        transition-delay: 100ms;
+      }
+      & .ripple3 {
+        transform: scale(4);
+        transition-delay: 150ms;
+      }
     }
 
     // animation: blink 1s ease-in infinite;
-    @keyframes blink {
-      0% {
-        border-color: rgba(100, 100, 100, 0);
-      }
-      50% {
-        border-color: rgba(100, 100, 100, 0.1);
-      }
-      100% {
-        border-color: rgba(100, 100, 100, 0);
-      }
-    }
+    // @keyframes blink {
+    //   0% {
+    //     border-color: rgba(100, 100, 100, 0);
+    //   }
+    //   50% {
+    //     border-color: rgba(100, 100, 100, 0.1);
+    //   }
+    //   100% {
+    //     border-color: rgba(100, 100, 100, 0);
+    //   }
+    // }
 
     &::after {
       content: "";
@@ -51,6 +84,7 @@
       left: 0.5rem;
       right: 0.5rem;
       background-color: rgba(10, 10, 10, 0.1);
+      border-radius: 50%;
       box-shadow: 0 1px 4px #000;
       transition: 3s ease-in-out;
     }
