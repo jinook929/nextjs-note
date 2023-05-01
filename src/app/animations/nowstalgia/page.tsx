@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import styles from "./page.module.scss";
 import PixelHoveringPage from "../pixel-hovering/page";
+import PixelRippling from "@/components/PixelRippling";
 
 export default function NowstalgiaPage() {
   const nowstalgiaHero = useRef<HTMLDivElement>(null);
@@ -48,7 +49,7 @@ export default function NowstalgiaPage() {
     <main className={styles.main}>
       <div className={styles.nowstalgiaHero} ref={nowstalgiaHero}>
         <div  className={styles.heroBackground}>
-          <PixelHoveringPage />
+          <PixelRippling />
         </div>
         <h1>
           <span className={styles.default}>Nowstalgia™</span>

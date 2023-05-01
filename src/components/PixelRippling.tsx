@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import styles from "./page.module.scss";
+import styles from "./PixelRippling.module.scss";
 
-export default function PixelHoveringPage() {
+export default function PixelRippling() {
   const [boxes, setBoxes] = useState<React.ReactNode[]>([]);
 
   useEffect(() => {
@@ -46,6 +46,9 @@ export default function PixelHoveringPage() {
                   : styles.navy
               }`}
             >
+              <span className={styles.ripple1}></span>
+              <span className={styles.ripple2}></span>
+              <span className={styles.ripple3}></span>
             </div>
           );
         }

@@ -26,8 +26,8 @@ import {
   faDropbox,
 } from "@fortawesome/free-brands-svg-icons";
 
-const numOfLines = [...Array(20)];
-const numOfIconSets = [...Array(5)]
+const numOfLines = [...Array(20).keys()];
+const numOfIconSets = [...Array(5).keys()]
 
 export default function AnimationPage() {
   return (
