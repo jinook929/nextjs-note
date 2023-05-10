@@ -1,0 +1,9 @@
+.blob {
+  svg {
+    border: 10px solid yellow;
+    
+    g:last-of-type {
+      visibility: hidden;
+    }
+  }
+}

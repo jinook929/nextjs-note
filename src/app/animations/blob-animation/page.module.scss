@@ -1,0 +1,103 @@
+.main {
+  .blobHero {
+    position: relative;
+    height: calc(100vh - 78px);
+
+    .heroBackground {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+/* .blobHero */
+.blobHero {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #000;
+  position: relative;
+  text-align: center;
+  padding: 28px;
+  overflow: hidden;
+  cursor: default;
+}
+
+.blobHero h1 {
+  font-weight: 400;
+  text-transform: none;
+  font-family: sans-serif;
+  font-size: 190px;
+  line-height: 194px;
+  margin: 0;
+  letter-spacing: -0.05em;
+  overflow: hidden;
+  color: white;
+  background-color: transparent;
+  pointer-events: none;
+}
+@media (max-width: 1200px) {
+  .blobHero h1 {
+    font-size: 72px;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+  }
+}
+@media (max-width: 900px) {
+  .blobHero h1 {
+    font-size: 64px;
+  }
+}
+@media (max-width: 600px) {
+  .blobHero h1 {
+    font-size: 48px;
+  }
+}
+@media (max-width: 360px) {
+  .blobHero h1 {
+    font-size: 40px;
+  }
+}
+
+.blobHero h1 span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.5s, color 0.5s;
+}
+
+.blobHero h1 span.default {
+  color: #fff;
+  font-family: Helvetica, "Arial", sans-serif;
+}
+
+.blobHero h1 span.purple {
+  color: #9b59b6;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.blobHero h1 span.blue {
+  color: #3498db;
+  font-family: Courier, monospace;
+}
+
+.blobHero h1 span.red {
+  color: #e74c3c;
+  font-family: Georgia, serif;
+}
+
+.blobHero h1 span.gold {
+  color: #ffbf0f;
+  font-family: "Apple Chancery", cursive;
+}
+
+.blobHero h1 span.animate {
+  opacity: 1;
+}
