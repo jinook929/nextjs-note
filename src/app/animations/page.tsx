@@ -3,6 +3,7 @@ import styles from "./page.module.scss";
 import IconTrailing from "../../../public/assets/images/icon-trailing.png";
 import PixelHovering from "../../../public/assets/images/pixel-hovering.png";
 import Nowstalgia from "../../../public/assets/images/nowstalgia.png";
+import BlobAnimation from "../../../public/assets/images/blob-animation.png";
 import Link from "next/link";
 
 export default function page() {
@@ -39,6 +40,15 @@ export default function page() {
             <h2>Nowstelgia</h2>
           </Link>
           <p>Nowstalgia display with pixel hovring effect</p>
+        </div>
+        <div className={styles.card}>
+          <Link className={styles.cardImage} href="/animations/blob-animation">
+              <Image src={BlobAnimation} alt="blob animation capture" fill />
+          </Link>
+          <Link href="/animations/blob-animation">
+            <h2>Blob Animation</h2>
+          </Link>
+          <p>This blob is alive!</p>
         </div>
       </div>
     </main>
