@@ -5,7 +5,6 @@ import localFont from 'next/font/local';
 import styles from "./layout.module.scss";
 import { Metadata } from "next";
 
-console.log(`${process.env.NEXT_PUBLIC_BASE_URL}/assets/images/og-image.png`)
 const sans = Inter({ 
   subsets: ["latin"],
   variable: "--font-sans",
@@ -36,7 +35,8 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: "https://nextjs-note-tau.vercel.app/assets/images/og-image.png",
+        // url: "https://nextjs-note-tau.vercel.app/assets/images/og-image.png",
+        url: "https://www.lambdatest.com/blog/wp-content/uploads/2021/07/css-animation.jpg",
         width: 800,
         height: 423,
         alt: "Wonderful Items",
