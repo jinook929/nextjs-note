@@ -27,8 +27,6 @@ const brand = localFont({
   variable: "--font-brand",
 });
 
-const ogImage = `${process.env.NEXT_PUBLIC_BASE_URL}/assets/images/og-image.png`;
-
 export const metadata: Metadata = {
   title: "Wonderful Items",
   description: "We sell wonderful items!",
@@ -38,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: ogImage,
+        url: "https://nextjs-note-tau.vercel.app/assets/images/og-image.png",
         width: 800,
         height: 423,
         alt: "Wonderful Items",
