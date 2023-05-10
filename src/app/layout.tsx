@@ -5,6 +5,7 @@ import localFont from 'next/font/local';
 import styles from "./layout.module.scss";
 import { Metadata } from "next";
 
+console.log(`${process.env.NEXT_PUBLIC_BASE_URL}/assets/images/og-image.png`)
 const sans = Inter({ 
   subsets: ["latin"],
   variable: "--font-sans",
@@ -26,6 +27,8 @@ const brand = localFont({
   variable: "--font-brand",
 });
 
+const ogImage = `${process.env.NEXT_PUBLIC_BASE_URL}/assets/images/og-image.png`;
+
 export const metadata: Metadata = {
   title: "Wonderful Items",
   description: "We sell wonderful items!",
@@ -35,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_BASE_URL}/assets/images/og-image.png`,
+        url: ogImage,
         width: 800,
         height: 423,
         alt: "Wonderful Items",
@@ -48,7 +51,7 @@ export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-}) {  
+}) {
   return (
     <html lang="en" className={`${sans.variable} ${gothic.variable}  ${bold.variable}  ${brand.variable}`}>
       <body>
