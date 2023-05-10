@@ -1,8 +1,8 @@
 .blob {
   svg {
     border: 10px solid yellow;
+    
     g:last-of-type {
-      transform: translateY(-10%);
       visibility: hidden;
     }
   }

@@ -2,19 +2,17 @@
 
 import { useEffect, useRef } from "react";
 import styles from "./page.module.scss";
-import PixelHoveringPage from "../pixel-hovering/page";
-import PixelRippling from "@/components/PixelRippling";
 import BlobAnimation from "@/components/BlobAnimation";
 
 export default function NowstalgiaPage() {
-  const nowstalgiaHero = useRef<HTMLDivElement>(null);
+  const blobHero = useRef<HTMLDivElement>(null);
   const pronunciation = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const animationDuration = 2000;
-    console.log(nowstalgiaHero.current?.childNodes);
+    console.log(blobHero.current?.childNodes);
     let nowstalgiaSpans: ChildNode[] = [];
-    nowstalgiaHero.current?.childNodes.forEach((child) => {
+    blobHero.current?.childNodes.forEach((child) => {
       nowstalgiaSpans = Array.from(child.childNodes);
     });
 
@@ -48,7 +46,7 @@ export default function NowstalgiaPage() {
 
   return (
     <main className={styles.main}>
-      <div className={styles.nowstalgiaHero} ref={nowstalgiaHero}>
+      <div className={styles.blobHero} ref={blobHero}>
         <div  className={styles.heroBackground}>
           <BlobAnimation />
         </div>
